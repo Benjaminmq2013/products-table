@@ -15,6 +15,8 @@ const getRandom = () => {
     return Math.floor(Math.abs(Math.random() * (1 - 999) + 1));
 }
 
+// Adding Data
+
 const buildElement = (e) => {
 
     e.preventDefault()
@@ -33,6 +35,7 @@ const buildElement = (e) => {
     const date = new Date().toLocaleDateString()
     
     const newElement = document.createElement("tr")
+    newElement.classList.add(`product-${random}`)
     
     
 
@@ -45,7 +48,7 @@ const buildElement = (e) => {
     <td>$${total.toFixed(2)}</td>
     <td>${date}</td>
     <td>
-        <button class="btn btn-delete">Delete</button>
+        <button class="btn btn-delete" onclick="delete_item(${random})" >Delete</button>
     </td>`
 
     newElement.innerHTML = tableElement
@@ -53,4 +56,15 @@ const buildElement = (e) => {
     table_body.appendChild(newElement)
 }
 
-console.log(table_body)
+
+
+// Deleting
+
+const delete_item = (id) => {
+    const elem = document.querySelector(`.product-${id}`)
+    table_body.removeChild(elem)
+    
+    
+    
+
+}
