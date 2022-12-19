@@ -61,10 +61,15 @@ const buildElement = (e) => {
 // Deleting
 
 const delete_item = (id) => {
+
     const elem = document.querySelector(`.product-${id}`)
-    table_body.removeChild(elem)
-    
-    
-    
+
+    let confirm = prompt('Para confirmar escribe "Yes", para cancelar escribe: "No" ')
+
+    // Validations
+
+    if(typeof confirm === "object") confirm = ""
+
+    if(confirm.toLowerCase() === "yes") table_body.removeChild(elem)
 
 }
