@@ -35,6 +35,7 @@ const buildElement = (e) => {
     const date = new Date().toLocaleDateString()
     
     const newElement = document.createElement("tr")
+    newElement.classList.add(`table-body-row`)
     newElement.classList.add(`product-${random}`)
     
     

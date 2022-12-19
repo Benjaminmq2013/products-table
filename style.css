@@ -74,3 +74,48 @@ body {
 } */
 
 /* Your Styles */
+
+.btn-delete{
+  background-color: red;
+  border: 0;
+  color: white;
+  border-radius: 3px;
+}
+
+.products-table tr{
+  display: flex;
+}
+
+.table-head{
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.table-body-row{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  /* margin-top: 20px; */
+}
+
+.table-head-row{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  
+}
+
+.products_table{
+  width: 861px;
+}
+
+
+
+.table-head-row th, .table-body-row td{
+  width: 100px;
+  text-align: center;
+}
+
